@@ -1,2 +1,3 @@
 # kianggg.github.io
-Trying to use GitHub Pages.
+
+Quick hosting of the Ilion Project for my friend Roby.
