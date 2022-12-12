@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <!-- CSS and Fonts -->
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+        <!-- Site Title -->
+        <title>Ilion Sanctuary: Retired</title>
+    </head>
+    <body>
+        <!-- Banner Image -->
+        <a href="/index.html"><img src="/images/banner.png" class="banner" alt="Team Ilion"></a>
+
+        <div id="wrapper">
+
+                <!-- Sidebar -->
+                <div id="sidebarSpacing">
+                    <div id="mainSidebar" class="sidebar">
+                    <ul>
+                        <li><a href="/about.html" id="about"><em>ABOUT</em></a></li>
+
+                        <!-- Very jank offset so that it matches the other buttons -->
+                        <button class="accordion"><em>TEAM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></button>
+                        <div class="teamsPanel">
+                        <p>
+                            <ul>
+                            <li><a id="teamsPopout" class="popout" href="/team.html" id="staff"><em>STAFF</em></a></li>
+                            <li><a id="teamsPopout" class="popout" href="/retired.html" id="retired"><em>RETIRED</em></a></li>
+                            </ul>
+                        </p>
+                        </div>
+
+                        <li><a href="/sponsors.html" id="sponsors"><em>SPONSORS</em></a></li>
+                        <li><a href="/blog.html" id="blog"><em>BLOG</em></a></li>
+                        <li><a href="/support.html" id="support"><em>SUPPORT US</em></a></li>
+                    </ul>
+                    </div>
+                </div>
+
+                <!-- Main Site Contents -->
+
+                <div id="main">
+                    <div id="textbox">
+                        <h1>RETIRED DOGS</h1>
+                        <p>
+                            Under construction.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- End of Main Site Contents -->
+
+          </div>
+
+            <!-- Javascript for Accordion sidebar, I got this from W3Schools -->
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                    } else {
+                    panel.style.display = "block";
+                    }
+                });
+                }
+            </script>
+    </body>
+</html>

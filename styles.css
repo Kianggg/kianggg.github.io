@@ -1,0 +1,195 @@
+:root {
+    --ilion-blue: #004DFF;
+    --light-blue: #3D7DFF;
+    --gridlines: #f0f0f5;
+  }
+
+body {
+    background-color: white;
+    color: var(--ilion-blue);
+    font-family: 'Squada One', sans-serif;
+    margin: 0px;
+
+    background-size: 40px 40px;
+
+    background-image:
+      linear-gradient(to right, var(--gridlines) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--gridlines) 1px, transparent 1px);
+}
+
+.banner {
+    width: 100%;
+}
+
+#splash {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-family: 'Droid Sans', serif; /* Different font for paragraphs */
+    font-size: 22px;
+}
+
+#fancy {
+    font-family: 'Alegreya', serif; /* Just another font style */
+}
+
+footer {
+    font-size: 10px;
+}
+
+ul {
+    display: inline;
+    padding-left: 0px
+}
+
+#wrapper {
+    width: 100%;
+    display: flex;
+}
+
+#main {
+    width: 100%;
+    margin-top: 30px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+/* Images that appear in the textboxes */
+.inline_img {
+    /* Resizing to size of browser window */
+    max-height: 100%;
+    max-width: 100%;
+
+    /* Centering */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#textbox {
+    width: 55%;
+    background-color: var(--ilion-blue);
+    color: white;
+    border-radius: 25px; /* Rounded edges */
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 55px;
+    padding-right: 55px;
+
+    margin: 0 auto;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* This is the stuff for the main team page, where you can see all of the dogs */
+/* Thanks again to W3Schools for teaching me CSS */
+.grid-container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px 30px;
+    padding: 10px;
+}
+
+.grid-item {
+    padding: 20px;
+    font-size: 48px;
+    text-align: center;
+}
+
+.grid-item img {
+    filter: drop-shadow(0 0 0.75rem grey)
+}
+
+.grid-item img:hover {
+    filter: drop-shadow(0 0 0.75rem var(--ilion-blue));
+}
+
+/* Thank you W3 */
+/* Style the links inside the sidenav */
+#mainSidebar a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -30px; /* Position them just slightly outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 10px; /* 10px padding */
+    width: 220px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+    font-size: 32px; /* Increase font size */
+    color: var(--ilion-blue); /* Text color */
+    background-image: url("/images/sidebar_button.png"); /* Pointy-ended button */
+    background-size: 100% 100%; /* Making sure it's not enormous */
+    /* Rounded corners on the top right and bottom right side border-radius: 0 5px 5px 0; */
+}
+
+#mainSidebar li {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 185px;
+    height: 40px;
+}
+
+#mainSidebar a:hover {
+    left: -10px; /* On mouse-over, make them pop out a little bit */
+}
+
+/* Literally just the "TEAM" button dropdown menu */
+.accordion {
+    background-image: url("/images/sidebar_button.png");
+    background-size: 100% 100%;
+
+    color: var(--ilion-blue); /* Not sure why it isn't inheriting the body font styling but whatever */
+    font-family: 'Squada One', sans-serif; /* I'll just add it again here */
+    font-size: 32px;
+
+    width: 210px; /* Sizing it to look like the others */
+    height: 50px;
+    margin-bottom: -32px; /* Fixing the spacing to make it even */
+
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+
+    background-color: transparent; /* Overwrite CSS native button background color */
+    border: none;
+    outline: none;
+    cursor: pointer; /* I think the Javascript needs this to assign the active object properly */
+    transition: 0.3s;
+}
+
+.active, .accordion:hover {
+    filter: brightness(90%); /* On mouse-over, darken the buton */
+}
+
+/* These are the buttons that are shown when you click on "TEAM" */
+.teamsPanel {
+    display: none;
+    overflow: hidden;
+}
+
+#teamsPopout {
+    width: 100%;
+    margin-left: 100px;
+}
+
+#mainSidebar a.popout {
+    background-image: url("/images/popout_button.png"); /* Closed chevrons */
+}
