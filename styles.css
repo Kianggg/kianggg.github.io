@@ -17,8 +17,30 @@ body {
       linear-gradient(to bottom, var(--gridlines) 1px, transparent 1px);
 }
 
+#wrapper {
+    position: absolute;
+    top: 185px;
+}
+
 .banner {
-    width: 100%;
+    position: absolute;
+    width: 2000px;
+    overflow: clip;
+}
+
+.logo {
+    position: absolute;
+    height: 105px;
+    width: auto;
+    top: 25px;
+    left: 15px;
+}
+
+.title {
+    position: absolute;
+    top: 100px;
+    left: 320px;
+    font-size: 52px;
 }
 
 #splash {
@@ -67,7 +89,7 @@ ul {
     width: 100%;
     margin-top: 30px;
     margin-right: 75px;
-    margin-left: 75px;
+    margin-left: 255px;
 }
 
 /* Images that appear in the textboxes */
@@ -93,7 +115,7 @@ ul {
     padding-left: 55px;
     padding-right: 55px;
 
-    margin: 0 auto;
+    /* margin: 0 auto; */
 
     margin-top: 15px;
     margin-bottom: 15px;
@@ -117,17 +139,25 @@ ul {
 }
 
 .grid-item img {
-    filter: drop-shadow(0 0 0.75rem grey)
+    /* filter: drop-shadow(0 0 0.75rem grey) */
+    transition: all .2s ease-in-out;
 }
 
 .grid-item img:hover {
-    filter: drop-shadow(0 0 0.75rem var(--ilion-blue));
+    transform: scale(1.1);
+    /* filter: drop-shadow(0 0 0.75rem var(--ilion-blue)); */
+}
+
+/* Make the sidebar move while scrolling */
+#sidebarSpacing {
+    position: sticky;
+    top: 200px;
 }
 
 /* Thank you W3 */
 /* Style the links inside the sidenav */
-#mainSidebar a {
-    position: absolute; /* Position them relative to the browser window */
+#mainSidebar a, button {
+    position: fixed; /* Position them relative to the browser window */
     left: -30px; /* Position them just slightly outside of the screen */
     transition: 0.3s; /* Add transition on hover */
     padding: 10px; /* 10px padding */
@@ -142,8 +172,7 @@ ul {
 }
 
 #mainSidebar li {
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     width: 185px;
     height: 40px;
 }
@@ -154,19 +183,13 @@ ul {
 
 /* Literally just the "TEAM" button dropdown menu */
 .accordion {
-    background-image: url("/images/sidebar_button.png");
-    background-size: 100% 100%;
-
-    color: var(--ilion-blue); /* Not sure why it isn't inheriting the body font styling but whatever */
-    font-family: 'Squada One', sans-serif; /* I'll just add it again here */
+    color: var(--ilion-blue); /* Button class overwrites font styling, so I have to re-add it here */
+    font-family: 'Squada One', sans-serif;
     font-size: 32px;
 
-    width: 210px; /* Sizing it to look like the others */
-    height: 50px;
-    margin-bottom: -32px; /* Fixing the spacing to make it even */
-
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
+    width: 242px; /* Sizing it to look like the others */
+    height: 55px;
+    margin-bottom: -32px;
 
     background-color: transparent; /* Overwrite CSS native button background color */
     border: none;
@@ -176,10 +199,9 @@ ul {
 }
 
 .active, .accordion:hover {
-    filter: brightness(90%); /* On mouse-over, darken the buton */
+    left: -10px; /* On mouse-over */
 }
 
-/* These are the buttons that are shown when you click on "TEAM" */
 .teamsPanel {
     display: none;
     overflow: hidden;
@@ -187,9 +209,11 @@ ul {
 
 #teamsPopout {
     width: 100%;
-    margin-left: 100px;
+    margin-left: 245px;
 }
 
+/* These are the buttons that are shown when you click on "TEAM" */
 #mainSidebar a.popout {
+    width: 180px;
     background-image: url("/images/popout_button.png"); /* Closed chevrons */
 }
