@@ -102,7 +102,7 @@ ul {
 }
 
 #textbox {
-    width: 50%;
+    width: 600px;
     background-color: var(--ilion-blue);
     color: white;
     border-radius: 25px; /* Rounded edges */
@@ -111,8 +111,6 @@ ul {
     padding-bottom: 35px;
     padding-left: 55px;
     padding-right: 55px;
-
-    margin: 0 auto;
 
     margin-top: 15px;
     margin-bottom: 15px;
