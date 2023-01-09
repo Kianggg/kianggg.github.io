@@ -135,6 +135,7 @@ ul {
 
 .grid-item img {
     /* filter: drop-shadow(0 0 0.75rem grey) */
+    max-width: 259px;
     transition: all .2s ease-in-out;
 }
 
