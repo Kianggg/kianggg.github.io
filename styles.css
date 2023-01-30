@@ -1,6 +1,6 @@
 :root {
     --ilion-blue: #004DFF;
-    --light-blue: #3D7DFF;
+    --light-blue: #67a1ff;
     --gridlines: #f0f0f5;
   }
 
@@ -101,7 +101,7 @@ ul {
     display: block;
 }
 
-#textbox {
+.textbox {
     width: 600px;
     background-color: var(--ilion-blue);
     color: white;
@@ -124,18 +124,22 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 0.2fr;
-    gap: 50px 30px;
+    gap: 0px 35px;
 }
 
 .grid-item {
-    padding: 20px;
     font-size: 48px;
     text-align: center;
 }
 
+#thumbnail {
+    display: grid;
+    place-items: center;
+}
+
 .grid-item img {
     /* filter: drop-shadow(0 0 0.75rem grey) */
-    max-width: 259px;
+    max-height: 340px;
     transition: all .2s ease-in-out;
 }
 
@@ -148,7 +152,12 @@ ul {
 #sidebarSpacing {
     position: sticky;
     top: 200px;
-    margin-right: 5px;
+    margin-right: 137px;
+}
+
+/* I know this is super jank but it fixes the problem of needing the spacing to be slightly different on the team page only */
+#sidebarSpacingTeampage {
+    margin-right: -150px;
 }
 
 /* Thank you W3 */
@@ -213,4 +222,134 @@ ul {
 #mainSidebar a.popout {
     width: 180px;
     background-image: url("/images/popout_button.png"); /* Closed chevrons */
+}
+
+/* ------------------------------------------ */
+/* Stuff for each individual dog's about page */
+/* ------------------------------------------ */
+
+#gallery {
+    width: 500px;
+    height: auto;
+    float: left;
+    margin-right: 15px; /* Small gap between the two sections */
+    /* border: 7px solid red; */
+}
+
+#info {
+    width: 500px;
+    height: auto;
+    float: left;
+    /* border: 7px solid green; */
+}
+
+/* The grid: Three equal columns that float next to each other */
+.column {
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+  
+  /* Style the images inside the grid */
+.column img {
+    width: 100%;
+    opacity: 0.8;
+    cursor: pointer;
+}
+  
+.column img:hover {
+    opacity: 1;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Big image that shows what you have selected (or dog's deafult pic) */
+.bigPic {
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+#expandedImg {
+    width: 100%;
+    max-height: 500px;
+}
+
+#galleryFrame {
+    height: 500px;
+    display: flex;
+}
+  
+/* Optional caption for the image */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Trapezoid-shaped tabs that control the info panels */
+
+#aboutTabs {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    /* border: 3px solid rgb(33, 32, 139); */
+    bottom: 55px;
+}
+
+#tab {
+    float: right; /* Align them to the right edge of the container */
+    position: relative;
+    left: 0px;
+    padding: 5px;
+    width: 25%;
+    height: 92%;
+    color: #f0f0f5;
+    font-family: 'Squada One', sans-serif;
+    font-size: 24px; /* Increase font size */
+    background-image: url("/images/info_page_tab.png"); /* Pointy-ended button */
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+#tab:hover {
+    background-image: url("/images/info_page_tab_hover.png");
+    color: var(--ilion-blue);
+}
+
+/* For spacing and content reveal on the info page */
+.toggleInfo {
+    position: relative;
+    bottom: 66px;
+    transition: 0.3s;
+}
+
+/* Textbox variation that appears on a dog's info page */
+.dogTextbox {
+    background-color: var(--light-blue);
+    color: rgb(49, 49, 49);
+    border-radius: 25px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    font-size: 16px;
+}
+
+.dogTextbox p {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
 }
