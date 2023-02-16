@@ -119,8 +119,7 @@ ul {
 /* This is the stuff for the main team page, where you can see all of the dogs */
 /* Thanks again to W3Schools for teaching me CSS */
 .grid-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 0.2fr;
@@ -153,11 +152,6 @@ ul {
     position: sticky;
     top: 200px;
     margin-right: 137px;
-}
-
-/* I know this is super jank but it fixes the problem of needing the spacing to be slightly different on the team page only */
-#sidebarSpacingTeampage {
-    margin-right: -150px;
 }
 
 /* Thank you W3 */
