@@ -119,7 +119,7 @@ ul {
 /* This is the stuff for the main team page, where you can see all of the dogs */
 /* Thanks again to W3Schools for teaching me CSS */
 .grid-container {
-    margin: 0 30px;
+    margin: 0 95px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 0.2fr;
