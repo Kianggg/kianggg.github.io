@@ -29,7 +29,7 @@ body {
 
 .banner {
     position: absolute;
-    width: 2000px;
+    /* width: 2000px; */
     overflow: clip;
 }
 
@@ -48,8 +48,9 @@ body {
     font-size: 52px;
 }
 
+/* The picture on the landing page */
 #splash {
-    width: 100%;
+    height: 100%;
 }
 
 h1 {
