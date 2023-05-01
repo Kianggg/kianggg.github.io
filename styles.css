@@ -87,6 +87,7 @@ ul {
 }
 
 #main {
+    position: absolute;
     width: 100%;
 }
 
@@ -113,6 +114,8 @@ ul {
     padding-left: 55px;
     padding-right: 55px;
 
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
 }
