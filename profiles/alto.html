@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <!-- CSS and Fonts -->
+        <link href="/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+        <!-- Site Title -->
+        <title>Ilion Sanctuary: About</title>
+    </head>
+    <body>
+        <!-- Banner Image -->
+        <img src="/images/banner.png" class="banner" alt="Team Ilion"></img>
+        <a href="/index.html"><img src="/images/ilion_logo.png" class="logo" alt="Sled Dog Sanctuary"></a>
+
+        <!-- Page Title-->
+        <div class="title">TEAM ILION</div>
+
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+                <div id="sidebarSpacing">
+                    <div id="mainSidebar" class="sidebar">
+                    <ul>
+                        <li><a href="/about.html" id="about"><em>ABOUT</em></a></li>
+
+                        <!-- Very jank offset so that it matches the other buttons -->
+                        <li>
+                        <button class="accordion"><em>TEAM</em></button>
+                            <div class="teamsPanel">
+                                <p>
+                                    <ul>
+                                    <li><a id="teamsPopout" class="popout" href="/team.html" id="staff"><em>STAFF</em></a></li>
+                                    <li><a id="teamsPopout" class="popout" href="/retired.html" id="retired"><em>RETIRED</em></a></li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li><a href="/sponsors.html" id="sponsors"><em>SPONSORS</em></a></li>
+                        <li><a href="/blog.html" id="blog"><em>BLOG</em></a></li>
+                        <li><a href="/support.html" id="support"><em>SUPPORT US</em></a></li>
+                    </ul>
+                    </div>
+                </div>
+
+            <!-- Main Site Contents -->
+
+            <div id="aboutPageWrapper">
+
+                <!-- Image Gallery -->
+
+                <div id="gallery">
+                    
+                    <!-- Standardize the height of the images -->
+                    <div id="galleryFrame">
+                        <!-- The big image -->
+                        <div class="bigPic">
+                            <!-- Expanded image; don't forget to set a default image! -->
+                            <img id="expandedImg" src="/images/dog_yukola_1.jpg">
+                        
+                            <!-- Image text; if you want a caption on the image -->
+                            <div id="imgtext"></div>
+                        </div>
+                    </div>
+
+                    <!-- The gallery of images -->
+                    <!-- Whatever is in "alt" will be the caption when the image is clicked, leave blank for no caption -->
+                    <div class="row">
+                        <div class="column">
+                        <img src="/images/dog_yukola_1.jpg" alt="" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                        <img src="/images/dog_yukola_2.jpg" alt="" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                        <img src="/images/dog_yukola_3.jpg" alt="" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End of Image Gallery -->
+
+                <!-- Information About Dog -->
+
+                <div id="info">
+
+                    <div id="aboutTabs">
+                        <button id="tab" onclick="openTab('more')">More</button>
+                        <button id="tab" onclick="openTab('stats')">Stats</button>
+                        <button id="tab" onclick="openTab('data')">About</button>
+                    </div>
+					
+					<!------------------------------------------>
+					<!-- TO ROBY: THIS IS WHERE CHANGES START -->
+					<!------------------------------------------>
+					
+					<!-- &emsp; is a space, two of them create a tab/indentation at the beginning of a text block -->
+					<!-- &mdash; is an emdash -->
+					<!-- <br> is a line break -->
+					<!-- If copy/pasting from the carrd.co site, some of the apostrophe's may need to be manually replaced -->
+					<!-- Idk why but something about them doesn't play nice with HTML for some reason -->
+					
+					<!-- Also yes there is a slightly easier and less awkward way to do this but that would require me to recode the page first -->
+					<!-- And this is quicker in the short term -->
+					
+                    <div class="toggleInfo" id="data" style="display:block">
+                        <div class="dogTextbox">
+                            <p>
+                                NAME: ALTO<br>
+                                BREED: Samoyed/Rough Collie Mix<br>
+                                FROM: Palmer, Alaska<br>
+                                POSITION: TEAM<br>
+                                TEAM: MID-DISTANCE<br>
+                                ARTIST: <a href="https://twitter.com/foxglovens">MIKKY</a><BY>
+                            </p>
+                        </div>
+
+                        <div class="dogTextbox">
+                            <p>
+                                  Alto was born to a litter of four; her father was a rough collie, and her mother, Tosca, was a samoyed. All of Alto's siblings were adopted except for her, allowing her to grow up close with her mother.
+Tosca was a former sled dog, and -while not particularly famous- her team did gain decent renown. Alto would spend her days running with her mother, who taught her everything she knew about racing. She loved every second of her daily routine; running and playing with her mom during the day and curling up in bed with her owner at night. For Alto, this was the true meaning of happiness.
+One quiet morning, their owner left to go for a hike as she usually did on the weekends. All seemed to be fine until their owner failed to show up that evening. At first, Alto thought maybe she was just running late. But then days passed, and she still had not returned home. Tosca felt it was her duty to look for her, so she and Alto left to search through the vast Alaskan wilderness. The search was challenging and grueling; Tosca often sacrificed her food and energy to keep her daughter alive as it was wearing Alto down just as much. After a week of searching, they eventually ended up on the side of a highway, where a concerned onlooker pulled over and picked them up. Learning of what had happened, the onlooker told the two that their owner was most likely dead; after all, the Alaskan wilderness was treacherous and unforgiving. This revelation broke the two, but they had to accept the harsh truth. The onlooker dropped them off at a shelter, where they were kept in a small, cramped enclosure.
+The treacherous journey proved to be too much for Tosca, and she knew she didn't have much longer. Staying close to her in her final days, Alto swore to her mother that they would get out of the shelter and be free again. The following morning, her mother passed on. Overcome with grief, Alto found the strength to break out of her enclosure and run away as far as she could.
+As she ran, she felt as if her mother was beside her, which gave her the strength to go on for miles. And through a stroke of luck, her legs gave out at the exact moment she had reached the Ilion sanctuary. The Musher quickly found her and took her in to nurse her back to health. When Alto woke up, she was energized and opened up to the Musher about everything that had happened; her owner disappearing and her mother passing. Despite the tragedies she had faced, she explained to them that it felt as if her mother guided her to the sanctuary; it felt like a sign. Alto decided to stay at the sanctuary, regaining her strength and eventually recovering emotionally from the loss. She learned about the Musher's sled team and felt like it truly was a blessing from her mother. Through this, Alto joined the team and found a new place to call her home.
+                            </p>
+                        </div>
+                    </div>
+					
+					<!-- &#x2B50 is a gold star -->
+
+                    <div class="toggleInfo" id="stats" style="display:none">
+                        <div class="dogTextbox">
+                            <p>
+                                STRENGTH: &#x2B50 &#x2B50 &#x2B50 &#x2B50<br>
+                                ENDURANCE: &#x2B50 &#x2B50 &#x2B50<br>
+                                SPEED: &#x2B50 &#x2B50 &#x2B50 &#x2B50 &#x2B50<br>
+                                DETERMINATION: &#x2B50 &#x2B50 &#x2B50 &#x2B50 &#x2B50<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="toggleInfo" id="more" style="display:none">
+                        <div class="dogTextbox">
+                            <h1>Musher's Comment</h1>
+                            <p>
+							"Alto is a very talented racer, but due to her eye condition, I have to give her regular check ups, especially leading up to a race. Thankfully, she's learned to keep her eyes closed during races-but even so, I can't help but feel anxious sometimes, considering how unpredictable the weather can be. I'm sure I come across as irresponsible to the other mushers for keeping her on the team, but removing her would crush her. She's been through so much and racing is incredibly important to her. I try to find solace in the fact that there have been other visually impaired dogs in racing history that were able to race just fine—in fact, Alto adapted to her condition much faster than the rest, and I'm really proud of her! Anyways, I'll stop being so dramatic because as long as she's under my care and is happy and smiling, then she can race to her heart's content!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+				<!---------------------------------->
+				<!-- End of Information About Dog -->
+				<!---------------------------------->
+
+            </div>
+
+            <!-- End of Main Site Contents -->
+
+          </div>
+
+            <!-- Javascript for Accordion sidebar, I got this from W3Schools -->
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                    } else {
+                    panel.style.display = "block";
+                    }
+                });
+                }
+            </script>
+
+            <!-- Javascript for Accordion sidebar, I also got this from W3Schools -->
+            <script>
+                function myFunction(imgs) {
+                    // Get the expanded image
+                    var expandImg = document.getElementById("expandedImg");
+                    // Get the image text
+                    var imgText = document.getElementById("imgtext");
+                    // Use the same src in the expanded image as the image being clicked on from the grid
+                    expandImg.src = imgs.src;
+                    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+                    imgText.innerHTML = imgs.alt;
+                }
+            </script>
+
+            <!-- Javascript for the tabs that control the info panels, I ALSO got this from W3Schools -->
+            <script>
+                function openTab(tabName) {
+                        var i;
+                        var x = document.getElementsByClassName("toggleInfo");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        document.getElementById(tabName).style.display = "block";
+                    }
+            </script>
+    </body>
+</html>
