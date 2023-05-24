@@ -18,7 +18,7 @@
         <a href="/index.html"><img src="/images/ilion_logo.png" class="logo" alt="Sled Dog Sanctuary"></a>
 
         <!-- Page Title-->
-        <div class="title">TEAM ILION</div>
+        <div class="title">YUKOLA</div>
 
         <div id="wrapper">
 
@@ -30,12 +30,26 @@
 
                         <!-- Very jank offset so that it matches the other buttons -->
                         <li>
-                        <button class="accordion"><em>TEAM</em></button>
+                        <button class="accordion"><em>DOGS</em></button>
                             <div class="teamsPanel">
                                 <p>
                                     <ul>
-                                    <li><a id="teamsPopout" class="popout" href="/team.html" id="staff"><em>STAFF</em></a></li>
-                                    <li><a id="teamsPopout" class="popout" href="/retired.html" id="retired"><em>RETIRED</em></a></li>
+                                        <li><a id="teamsPopout" class="popout" href="/team.html" id="staff"><em>TEAM ILION</em></a></li>
+                                        <li><a id="teamsPopout" class="popout" href="/retired.html" id="retired"><em>KENNEL</em></a></li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <button class="accordion"><em>FACILITIES</em></button>
+                            <div class="teamsPanel">
+                                <p>
+                                    <ul>
+                                    <li><a id="teamsPopout" class="popout" href="/clinic.html" id="clinic"><em>VETERINARY CLINIC</em></a></li>
+                                    <li><a id="teamsPopout" class="popout" href="/cafe.html" id="cafe"><em>CAFE</em></a></li>
+                                    <li><a id="teamsPopout" class="popout" href="/salon.html" id="salon"><em>DOG SALON</em></a></li>
+                                    <li><a id="teamsPopout" class="popout" href="/daycare.html" id="daycare"><em>DAY CARE</em></a></li>
                                     </ul>
                                 </p>
                             </div>
@@ -90,8 +104,8 @@
                 <div id="info">
 
                     <div id="aboutTabs">
-                        <button id="tab" onclick="openTab('more')">More</button>
-                        <button id="tab" onclick="openTab('stats')">Stats</button>
+                        <button id="tab" onclick="openTab('interview')">Interview</button>
+                        <button id="tab" onclick="openTab('stats')">Facts</button>
                         <button id="tab" onclick="openTab('data')">About</button>
                     </div>
 
@@ -125,13 +139,30 @@
                                 DETERMINATION: &#x2B50 &#x2B50 &#x2B50 &#x2B50 &#x2B50<br>
                             </p>
                         </div>
-                    </div>
 
-                    <div class="toggleInfo" id="more" style="display:none">
+                        <div class="dogTextbox">
+                            <h1>Fun Facts</h1>
+                            <p>
+                                &#x1F43E Yukola and Cheremsha were both at one point owned by the musher, Akhill, before arriving at the Ilion sanctuary.<br>
+                                &#x1F43E Yukola is named after a traditional dried fish cuisine<br>
+                                &#x1F43E She carries around a water bottle, but prefers to eat snow off of the ground<br>
+                                &#x1F43E Yukola's dream is to win the Nadezhda race<br>
+                            </p>
+                        </div>
+
                         <div class="dogTextbox">
                             <h1>Musher's Comment</h1>
                             <p>
                                 &emsp;&emsp;"I was thrilled to bring home Yukola from Chukotka as she was one of the first dogs to be a part of my newly formed team. Akhill mentioned Yukola's wild personality, but I don't think she realized how attached she was to her. When Yukola realized Akhill gave her away, she tried to escape a few times to go back to Russia. Thankfully at the time, my sanctuary was small, so it was easy to Yukola-proof everything. But her homesickness affected her mood drastically, and her "wild" self was the opposite for a while. I spent ample time with her to help her realize that the sanctuary was her new home, and that I would always be there for her. She eventually came around, and her infamous hyper-self finally showed itself. She was challenging to train as she can be unpredictable during training sessions. She's also grown very attached to me and has since developed severe separation anxiety. While some of my other dogs with separation anxiety are good at dealing with me leaving, Yukola will go on rampages, destroying anything she lays her eyes on, or she'll attempt to escape to find me. There's been a few times where I had to go into town for a meeting, and Yukola would be waiting by my car for me. Despite all of this, Yukola is one of my most treasured dogs! She's always hardworking and dependable during actual races, and her passion for it is a reminder of why I became a musher."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="toggleInfo" id="interview" style="display:none">
+                        <div class="dogTextbox">
+                            <h1>Interview</h1>
+                            <p>
+                                WIP
                             </p>
                         </div>
                     </div>
@@ -152,6 +183,14 @@
 
                 for (i = 0; i < acc.length; i++) {
                 acc[i].addEventListener("click", function() {
+                    /* Deselect any other accordions and hide their contents */
+                    for (n = 0; n < acc.length; n++) {
+                        if (this != acc[n]) {
+                            acc[n].classList.remove("active");
+                            acc[n].nextElementSibling.style.display = "none";
+                        }
+                    }
+
                     /* Toggle between adding and removing the "active" class,
                     to highlight the button that controls the panel */
                     this.classList.toggle("active");

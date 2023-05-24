@@ -18,7 +18,7 @@
         <a href="/index.html"><img src="/images/ilion_logo.png" class="logo" alt="Sled Dog Sanctuary"></a>
 
         <!-- Page Title-->
-        <div class="title">TEAM ILION</div>
+        <div class="title">ABOUT US</div>
         
         <div id="wrapper">
 
@@ -30,15 +30,29 @@
 
                     <!-- Very jank offset so that it matches the other buttons -->
                     <li>
-                    <button class="accordion"><em>TEAM</em></button>
+                    <button class="accordion"><em>DOGS</em></button>
                     <div class="teamsPanel">
-                    <p>
-                        <ul>
-                        <li><a id="teamsPopout" class="popout" href="/team.html" id="staff"><em>STAFF</em></a></li>
-                        <li><a id="teamsPopout" class="popout" href="/retired.html" id="retired"><em>RETIRED</em></a></li>
-                        </ul>
-                    </p>
+                        <p>
+                            <ul>
+                            <li><a id="teamsPopout" class="popout" href="/team.html" id="staff"><em>TEAM ILION</em></a></li>
+                            <li><a id="teamsPopout" class="popout" href="/retired.html" id="retired"><em>KENNEL</em></a></li>
+                            </ul>
+                        </p>
                     </div>
+                    </li>
+
+                    <li>
+                        <button class="accordion"><em>FACILITIES</em></button>
+                        <div class="teamsPanel">
+                            <p>
+                                <ul>
+                                <li><a id="teamsPopout" class="popout" href="/clinic.html" id="clinic"><em>VETERINARY CLINIC</em></a></li>
+                                <li><a id="teamsPopout" class="popout" href="/cafe.html" id="cafe"><em>CAFE</em></a></li>
+                                <li><a id="teamsPopout" class="popout" href="/salon.html" id="salon"><em>DOG SALON</em></a></li>
+                                <li><a id="teamsPopout" class="popout" href="/daycare.html" id="daycare"><em>DAY CARE</em></a></li>
+                                </ul>
+                            </p>
+                        </div>
                     </li>
 
                     <li><a href="/sponsors.html" id="sponsors"><em>SPONSORS</em></a></li>
@@ -87,13 +101,21 @@
 
           </div>
 
-            <!-- Javascript for Accordion sidebar, I got this from W3Schools -->
+            <!-- Javascript for Accordion sidebar -->
             <script>
                 var acc = document.getElementsByClassName("accordion");
                 var i;
 
                 for (i = 0; i < acc.length; i++) {
                 acc[i].addEventListener("click", function() {
+                    /* Deselect any other accordions and hide their contents */
+                    for (n = 0; n < acc.length; n++) {
+                        if (this != acc[n]) {
+                            acc[n].classList.remove("active");
+                            acc[n].nextElementSibling.style.display = "none";
+                        }
+                    }
+
                     /* Toggle between adding and removing the "active" class,
                     to highlight the button that controls the panel */
                     this.classList.toggle("active");

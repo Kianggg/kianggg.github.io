@@ -28,7 +28,8 @@ body {
 }
 
 .banner {
-    position: absolute;
+    position: sticky;
+    top: 0;
     /* width: 2000px; */
     overflow: clip;
 }
@@ -93,6 +94,16 @@ ul {
 #main {
     position: absolute;
     width: 100%;
+}
+
+/* For textbox-less display of text */
+#mainFacilities {
+    display: flex;
+    color: black;
+}
+
+#mainFacilities #gallery {
+    width: auto;
 }
 
 /* Images that appear in the textboxes */
